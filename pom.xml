@@ -121,6 +121,7 @@
                             <goal>test</goal>
                         </goals>
                     </execution>
+					
                 </executions>
                 <configuration>
                     <storyType>html</storyType>
@@ -204,6 +205,12 @@
             <version>1.9.0</version>
             <scope>test</scope>
         </dependency>
+		<exclusions>
+    <exclusion>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+    </exclusion>
+</exclusions>
     </dependencies>
 
     <modules>
@@ -245,7 +252,7 @@
                         <artifactId>maven-pmd-plugin</artifactId>
                         <version>3.2</version>
                         <configuration>
-                            <targetJdk>1.6</targetJdk>
+                            <targetJdk>1.8</targetJdk>
                             <aggregate>true</aggregate>
                             <format>xml</format>
                             <!-- CPD options -->
